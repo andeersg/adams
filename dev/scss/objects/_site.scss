@@ -1,0 +1,33 @@
+.site {
+  &--wrap {
+    max-width: 1190px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__header {
+    background-color: $primary-color;
+    display: flex;
+    margin-bottom: 30px;
+    color: $primary-color-text;
+    height: 300px;
+  }
+  &__branding {
+    margin: auto;
+    text-align: center;
+  }
+  &__name {
+    font-size: 32px;
+  }
+  &__content {
+    width: 68%;
+    margin-right: 2%;
+  }
+  &__sidebar {
+    width: 30%;
+  }
+  &__footer {
+    background-color: $primary-color-dark;
+    padding: 40px;
+  }
+}

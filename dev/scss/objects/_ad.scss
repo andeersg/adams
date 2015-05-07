@@ -1,0 +1,15 @@
+.ad {
+  display: flex;
+  margin-bottom: 30px;
+  &__single {
+    &--inline {
+      width: 48%;
+      margin: auto;
+      text-align: center;
+    }
+    &--full {
+      width: 96%;
+      margin: auto;
+    }
+  }
+}
