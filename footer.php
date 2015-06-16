@@ -7,17 +7,15 @@
  * @package Adams
  */
 ?>
+  <?php //get_sidebar(); ?>
+  </div>
+</div><!-- #content -->
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'adams' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'adams' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'adams' ), 'adams', '<a href="http://andeers.com" rel="designer">Andeersg</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="colophon" class="site__footer" role="contentinfo">
+  <div class="container">
+    <p>© <?php print date('Y'); ?> - Anders Grendstadbakk – <a href="https://twitter.com/andeersg">Twitter</a> – <a href="mailto:anders.2205@gmail.com">Email</a> – <a href="https://github.com/andeersg">Github</a></p>
+  </div>
+</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
 

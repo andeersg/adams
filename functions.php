@@ -103,11 +103,28 @@ function adams_scripts() {
     wp_enqueue_style( 'adams-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css' );
   }
 
+  wp_enqueue_script( 'adams-theme', get_stylesheet_directory_uri() . '/assets/js/adams.js', array(), null, true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'adams_scripts' );
+
+
+/**
+ * Re-add baseurl to links for sitemap.
+ */
+function adams_fix_urls($url, $post) {
+  if (substr($url, 0, 1) == '/') {
+    return home_url() . $url;
+  }
+  else {
+    return $url;
+  }
+}
+add_filter('wpseo_xml_sitemap_post_url', 'adams_fix_urls', 10,  2);
+
 
 /**
  * Implement the Custom Header feature.
@@ -133,3 +150,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Comment stuff
+ */
+require get_template_directory() . '/inc/comments-extra.php';

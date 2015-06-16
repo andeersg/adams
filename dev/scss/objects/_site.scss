@@ -6,28 +6,63 @@
     margin-right: auto;
   }
   &__header {
-    background-color: $primary-color;
-    display: flex;
+    //background-color: #faf4df; // $primary-color;
+    background-color: #F9F8F7;
     margin-bottom: 30px;
-    color: $primary-color-text;
-    height: 300px;
+    //color: $primary-color-text;
+    //height: 300px;
+    //flex: 1;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
   }
-  &__branding {
-    margin: auto;
-    text-align: center;
+  &__logo {
+    max-width: 30px;
+    display: inline-block;
   }
   &__name {
-    font-size: 32px;
+    font-size: 42px;
+    display: block;
+    text-align: left;
+    margin: 0;
+    color: #3A3A4C; //#5d533d; //$primary-color-text;
+    a {
+      color: inherit;
+    }
+  }
+  &__tagline {
+    //display: inline-block;
+    //margin: auto;
+    margin: 0;
+    font-size: 24px;
   }
   &__content {
-    width: 68%;
+    width: 58%;
     margin-right: 2%;
   }
   &__sidebar {
-    width: 30%;
+    width: 40%;
   }
   &__footer {
-    background-color: $primary-color-dark;
-    padding: 40px;
+    //background-color: $primary-color-dark;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 0.9em;
+  }
+}
+
+.logo-svg {
+  width: 30px;
+  height: 30px;
+  display: none; // Not sure what to do yet.
+  .hole {
+    stroke: none;
+    fill: #fff;
+  }
+  .rest {
+    stroke: none;
+    fill: #333;
   }
 }

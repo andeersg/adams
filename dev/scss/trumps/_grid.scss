@@ -1,0 +1,34 @@
+/**
+ * @file
+ * _grid.scss
+ *
+ * Small grid system using flexbox.
+ *
+ * Mimicks bootstrap in class names.
+ */
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-4 {
+  width: 33.3%;
+}
+
+.col-md-3 {
+  width: 25%;
+}
+
+.col-md-9 {
+  width: 75%;
+}

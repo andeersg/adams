@@ -1,0 +1,142 @@
+/**
+ * Main menu and full screen overlay menu.
+ */
+$menu-color: #333;
+$menu-active-color: #fff;
+
+.navi {
+  // Maybe need a body class to prevent scrolling while menu is open.
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 0.4s;
+  
+    background: rgba(2, 23, 37, 0.96);
+    &.is-visible {
+      transform: translateY(0);
+    }
+  }
+  &__toggle {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    width: 100px;
+    bottom: 0;
+    background-color: transparent;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    &__text {
+      color: $menu-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      /* hide the text on small devices */
+      //display: none;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+    &__icon {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      bottom: auto;
+      right: 0;
+      transform: translateX(-50%) translateY(-50%);
+      width: 18px;
+      height: 2px;
+      background-color: $menu-color;
+      transition: background-color 0.3s;
+      &::before,
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $menu-color;
+        right: 0;
+        transition: transform .3s, top .3s, background-color 0s;
+      }
+      &::before {
+        top: -5px;
+      }
+      &::after {
+        top: 5px;
+      }
+    }
+  }
+}
+
+.overlay-visible {
+  overflow: hidden;
+  height: 100% !important;
+  .navi__toggle__icon {
+    background-color: rgba(255, 255, 255, 0);
+    &::before,
+    &::after {
+      background-color: $menu-active-color;
+    }
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(225deg);
+    }
+  }
+  .navi__toggle__text {
+    color: $menu-active-color;
+  }
+}
+
+.cd-primary-nav-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: #03263d;
+}
+
+
+.menu {
+  &__main {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    margin-top: 70px;
+    color: #fff;
+    list-style: none;
+    li {
+      padding: 20px 0;
+    }
+    a {
+      color: inherit;
+      font-weight: 300;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+}
+.nav-previous,
+.nav-next {
+  width: 50%;
+}
+.nav-next {
+  text-align: right;
+}

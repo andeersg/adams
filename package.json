@@ -2,7 +2,9 @@
   "name": "adams",
   "version": "0.0.0",
   "description": "New WordPress theme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-sourcemaps": "^1.5.2"
+  },
   "devDependencies": {
     "gulp": "~3.8.10",
     "gulp-autoprefixer": "2.0.0",

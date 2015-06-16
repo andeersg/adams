@@ -1,10 +1,39 @@
+// Frontpage list of posts.
+.blog .post {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  &:after {
+    border-bottom: 1px solid #e5e5e5;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+  &:last-child {
+    margin-bottom: 0;
+    &:after {
+      border-bottom: none;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .post {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   &__title {
     font-size: 28px;
     margin-bottom: 5px;
-    margin-top: 15px;
-    font-weight: 800;
+    margin-top: 4px;
+    font-weight: 300;
+    color: #333;
+    a {
+      color: inherit;
+      font-weight: inherit;
+    }
   }
   &__meta {
     color: $secondary-text-color;
@@ -13,8 +42,8 @@
       color: inherit;
       font-weight: 400;
     }
-    .vcard:after {
-      content: ',';
+    .byline {
+      display: none;
     }
   }
   &--regular {
@@ -46,11 +75,8 @@
     padding-bottom: 10px;
   }
   &__more {
-    color: $primary-color;
-    border: 2px solid $primary-color;
-    padding: 5px 10px;
-    font-size: 17px;
+    display: block;
     margin-top: 10px;
-    display: inline-block;
+    font-size: 0.8em;   
   }
 }

@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #ececec;
+  background-color: #fff;
   margin: 0;
   color: $primary-text-color;
   font-family: 'Raleway', Helvetica, sans-serif;
@@ -14,6 +14,19 @@ h1, h2, h3 {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -21,12 +34,20 @@ img {
 
 a {
   text-decoration: none;
-  color: #FF5252;
+  color: $link-color;
   font-weight: 600;
+  &[data-visited]:after {
+    content: ' (Seen)';
+    color: #e2e2e2;
+    font-weight: 300;
+    font-size: 0.8em;
+  }
 }
 
+
+// Code blocks:
 pre {
-  background-color: #34495e;
+  background-color: #1d1f20;
   color: $primary-color-text;
   padding: 0;
   word-break: normal;
@@ -41,3 +62,16 @@ pre {
     display: block;
   }
 }
+
+// Inline code:
+code {}
+
+strong {
+  font-weight: 700;
+}
+
+blockquote {}
+
+ul {}
+ol {}
+li {}

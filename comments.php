@@ -50,6 +50,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
+					'callback'   => 'adams_comments_comment',
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -75,6 +76,6 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'adams' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php adams_comment_form(); ?>
 
 </div><!-- #comments -->

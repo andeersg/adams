@@ -1,0 +1,107 @@
+.comment-form {
+  &__author,
+  &__email,
+  &__url {
+    margin-right: 10px;
+  }
+  &__text {
+    width: 100%;
+    min-height: 200px;
+  }
+  label {
+    font-size: 0.9em;
+  }
+}
+
+
+
+.form {
+  &__text {
+    border: 1px solid #e6e6e6;
+    outline: none;
+    padding: 7px;
+  }
+  &__textarea {
+    border: 1px solid #e6e6e6;
+    outline: none;
+    padding: 7px;
+  }
+  &__submit {
+    padding: 10px;
+    background-color: #1776ea;
+    color: #fff;
+    border: none;
+    font-size: 0.8em;
+    font-weight: 300;
+    outline: none;
+    font-family: 'Raleway', Helvetica, sans-serif;
+  }
+}
+
+
+.required {
+  margin-left: 5px;
+  font-size: 0.9em;
+  color: #c1c1c1;
+}
+
+.comment-list {
+  padding: 0;
+  margin: 0;
+}
+
+.comment {
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin-left: 0;
+  &__avatar {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    padding-right: 18px;
+    z-index: 999; // Not sure why?
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__content {
+    position: relative;
+    margin-left: 65px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-clip: padding-box;
+    box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+  }
+  &__name {
+    display: block;
+    margin: 5px 0 2px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__meta {
+    margin-bottom: 15px;
+    color: #666;
+    //font: italic 12px Georgia,Times,serif; // Don't want this.
+    font-size: 12px;
+    a {
+      color: inherit;
+    }
+  }
+  &__text {}
+  &__reply a {
+    display: block;
+    text-align: center;
+    margin: 5px 0 10px;
+    padding: 3px 0;
+    text-decoration: none;
+    background: rgba(0,0,0,.02);
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    font-weight: 300;
+  }
+}

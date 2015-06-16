@@ -8,3 +8,15 @@ $accent-color:         #FF5252;
 $primary-text-color:   #212121;
 $secondary-text-color: #727272;
 $divider-color:        #B6B6B6;
+
+$link-color: #FF5252;
+
+
+$theme: ocean;
+
+@if $theme == red {
+  $link-color: #FF5252;
+}
+@else if $theme == ocean {
+  $link-color: #2291f1;
+}
