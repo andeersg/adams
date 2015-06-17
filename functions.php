@@ -100,7 +100,8 @@ function adams_scripts() {
 	  wp_enqueue_style( 'adams-style', get_stylesheet_directory_uri() . '/assets/css/style.css' );
   }
   else {
-    wp_enqueue_style( 'adams-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css' );
+    //wp_enqueue_style( 'adams-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css' );
+    wp_enqueue_style( 'adams-style', get_stylesheet_directory_uri() . '/assets/css/style.css' );
   }
 
   wp_enqueue_script( 'adams-theme', get_stylesheet_directory_uri() . '/assets/js/adams.js', array(), null, true );
